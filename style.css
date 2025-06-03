@@ -128,29 +128,29 @@ textarea:focus {
 .botones-acciones {
     margin-top: 40px;
     display: flex;
-    flex-direction: column; /* Esto hace que los elementos se apilen verticalmente */
-    align-items: center;   /* Esto centra los elementos horizontalmente dentro del contenedor */
-    gap: 20px;             /* Añade espacio entre los botones */
-    /* Puedes ajustar el gap (20px) al tamaño de espacio que prefieras */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center;   /* Centra horizontalmente los elementos */
+    justify-content: center; /* Centra verticalmente si hubiera espacio */
+    gap: 20px;             /* Espacio entre los botones */
+    width: 100%;          /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
 
-/* Opcional: Para asegurar que los botones ocupen el ancho deseado si son enlaces */
-/* Si tus botones son <button> y <a>, ambos necesitan el mismo ancho */
-.botones-acciones .boton-primario,
-.botones-acciones button {
-    width: 100%; /* Ocupa todo el ancho disponible del contenedor */
-    max-width: 200px; /* Limita el ancho máximo para que no sean demasiado grandes */
-    box-sizing: border-box; /* Asegura que padding y border no aumenten el ancho total */
+.botones-acciones a.boton-primario,
+.botones-acciones button.boton-primario {
+    display: block;       /* Hace que los enlaces y botones ocupen una línea completa */
+    width: 100%;          /* Ocupan todo el ancho del contenedor .botones-acciones */
+    max-width: 200px;      /* Limita el ancho máximo de los botones */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    text-align: center;    /* Centra el texto dentro de los botones */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
-/* Si quieres que los botones se estiren un poco más en pantallas pequeñas */
-@media (max-width: 480px) {
-    .botones-acciones .boton-primario,
-    .botones-acciones button {
-        width: 100%; /* Asegura que ocupen todo el ancho en móviles */
-        max-width: none; /* Permite que se estiren hasta el límite del contenedor principal */
+/* Media query para pantallas más pequeñas (opcional) */
+@media (max-width: 600px) {
+    .botones-acciones a.boton-primario,
+    .botones-acciones button.boton-primario {
+        max-width: 100%; /* Los botones pueden ocupar todo el ancho en pantallas pequeñas */
     }
-}
 }
 
 button {
