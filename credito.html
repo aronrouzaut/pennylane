@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Penny Lane</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="contenedor-principal">
+
+    <h1>PENNY LANE</h1>
+
+    <h2>Nuevo gasto</h2>
+
+    <h3 class="subtitulo-seccion">Con tarjeta de crédito</h3>
+
+
+
+    <form id="dataForm" class="formulario-ingreso">
+
+      <div class="campo-grupo">
+
+        <label for="autor">¿Quién?</label>
+
+        <select name="autor" id="autor">
+
+          <option value="Aron">Aron</option>
+
+          <option value="Cande">Cande</option>
+
+        </select>
+
+      </div>
+
+      <div class="campo-grupo">
+
+        <label for="fecha">¿Cuándo?</label>
+
+        <input type="date" id="fecha" name="fecha" required />
+
+      </div>
+
+      <div class="campo-grupo">
+
+        <label for="detalle">¿Qué?</label>
+
+        <textarea id="detalle" name="detalle" required></textarea>
+
+      </div>
+
+      <div class="campo-grupo">
+
+        <label for="precio">¿Cuánto?</label>
+
+        <input type="number" id="precio" name="precio" step="0.01" required />
+
+      </div>
+
+      <div class="campo-grupo">
+
+        <label for="cuotas">¿En cuántas?</label>
+
+        <input type="number" name="cuotas" id="cuotas" value="1" />
+
+      </div>
+
+      <div class="campo-grupo">
+
+        <label for="tarjeta">¿Cuál?</label>
+
+        <select name="tarjeta" id="tarjeta">
+
+          <option value="Master BBVA">Master BBVA</option>
+
+          <option value="Visa BBVA">Visa BBVA</option>
+
+          <option value="Master NBSF">Master NBSF</option>
+
+          <option value="Master BdS">Master BdS</option>
+
+          <option value="MercadoCredito">MercadoCredito</option>
+
+        </select>
+
+      </div>
+
+      <div class="campo-grupo">
+
+        <label for="clave">Autenticación:</label>
+
+        <input name="clave" id="clave" type="password" required />
+
+      </div>
+
+
+
+      <div class="botones-acciones">
+
+        <button type="submit" class="boton-primario">Guardar</button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+  <!-- Toast container -->
+
+  <div id="toast" class="toast"></div>
+
+
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>
