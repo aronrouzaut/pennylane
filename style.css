@@ -21,6 +21,23 @@
   --color-tabla-celda-fondo-impar: #212136;
   --color-tabla-celda-hover: #3a3a5a;
 }
+/* style.css */
+
+/* ... tus estilos existentes ... */
+
+.boton-deshabilitado {
+    background-color: #cccccc; /* Un gris claro */
+    color: #666666; /* Texto gris más oscuro */
+    cursor: not-allowed; /* Cambia el cursor para indicar que no es clickeable */
+    opacity: 0.7; /* Lo hace un poco transparente */
+    /* Puedes añadir o ajustar propiedades según tu diseño */
+}
+
+/* Opcional: para que no cambie al pasar el mouse por encima si ya es deshabilitado */
+.boton-deshabilitado:hover {
+    background-color: #cccccc; /* Mantiene el color gris */
+    box-shadow: none; /* Elimina la sombra si tus botones tienen alguna */
+}
 
 body {
   font-family: 'Poppins', sans-serif;
